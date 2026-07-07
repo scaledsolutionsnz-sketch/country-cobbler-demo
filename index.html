@@ -170,6 +170,12 @@
   .cc-form textarea { min-height: 130px; resize: vertical; }
   .form-submit { background: var(--accent); color: white; border: none; padding: 16px 28px; border-radius: 6px; font-family: 'Oswald', sans-serif; font-size: 1rem; letter-spacing: 2px; text-transform: uppercase; cursor: pointer; transition: background 0.2s, transform 0.2s; display: flex; align-items: center; justify-content: center; gap: 10px; }
   .form-submit:hover { background: var(--accent-light); transform: translateY(-2px); }
+  .contact-cta { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 40px 34px; display: flex; flex-direction: column; gap: 16px; }
+  .contact-cta h3 { font-family: 'Oswald', sans-serif; font-size: 1.9rem; font-weight: 700; color: var(--white); text-transform: uppercase; letter-spacing: 1px; line-height: 1; }
+  .contact-cta p { color: rgba(255,255,255,0.7); font-size: 0.98rem; line-height: 1.7; }
+  .contact-cta-btns { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 4px; }
+  .contact-cta-btns a { flex: 1; min-width: 150px; }
+  .contact-cta-note { font-size: 0.82rem; color: rgba(255,255,255,0.45); }
   .form-success { display: none; background: rgba(139,105,20,0.15); border: 1px solid rgba(139,105,20,0.4); border-radius: 8px; padding: 28px; text-align: center; color: var(--white); }
   .form-success h3 { font-family: 'Oswald', sans-serif; font-size: 1.4rem; margin-bottom: 8px; color: var(--accent); }
   .spinner { display: none; width: 22px; height: 22px; border: 2px solid rgba(255,255,255,0.3); border-top-color: white; border-radius: 50%; animation: spin 0.8s linear infinite; }
@@ -493,43 +499,17 @@
         <div class="contact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></div>
         <div class="contact-detail-text"><strong>Location</strong><span>45 Mailer Street, Mornington, Dunedin 9011</span></div>
       </div>
-      <div class="contact-detail">
-        <div class="contact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1z"/><path d="m3.5 6.5 8.5 6 8.5-6"/></svg></div>
-        <div class="contact-detail-text"><strong>Email</strong><span>puregolfnz@gmail.com</span></div>
-      </div>
     </div>
     <div>
-      <div class="form-success" id="formSuccess">
-        <h3>Thanks! We'll be in touch.</h3>
-        <p style="color:rgba(255,255,255,0.6); font-size:0.95rem;">We've received your enquiry and will get back to you with a quote shortly.</p>
-      </div>
-      <form class="cc-form" id="mainForm" action="https://formsubmit.co/puregolfnz@gmail.com" method="POST">
-        <input type="hidden" name="_next" value="https://country-cobbler-demo.vercel.app/?sent=1#contact">
-        <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_subject" value="New Enquiry — Country Cobbler Website">
-        <div class="form-row">
-          <input type="text" name="firstName" placeholder="First Name" required>
-          <input type="text" name="lastName" placeholder="Last Name" required>
+      <div class="contact-cta">
+        <h3>Pop in or give us a call</h3>
+        <p>The easiest way to get a repair sorted is to bring your shoes into the shop on Mailer Street, or give us a call and we'll talk you through it.</p>
+        <div class="contact-cta-btns">
+          <a class="btn-primary" href="tel:0212384506" style="justify-content:center;">Call the Shop</a>
+          <a class="btn-outline" href="https://maps.google.com/?q=45+Mailer+Street,+Mornington,+Dunedin+9011" target="_blank" rel="noopener" style="justify-content:center;">Get Directions</a>
         </div>
-        <input type="email" name="email" placeholder="Email Address" required>
-        <input type="tel" name="phone" placeholder="Phone Number">
-        <select name="service" required>
-          <option value="" disabled selected>Select a Service</option>
-          <option>Heel Replacement</option>
-          <option>Sole Repair</option>
-          <option>Leather Conditioning</option>
-          <option>Boot Repair</option>
-          <option>Zipper Repair</option>
-          <option>Shoe Stretching</option>
-          <option>Full Resoling</option>
-          <option>Other / Not Sure</option>
-        </select>
-        <textarea name="message" placeholder="Describe what needs repairing..." required></textarea>
-        <button type="submit" class="form-submit" id="submitBtn">
-          <span id="btnText">Send Enquiry</span>
-          <div class="spinner" id="btnSpinner"></div>
-        </button>
-      </form>
+        <span class="contact-cta-note">Open for drop-ins during shop hours &middot; 45 Mailer Street, Mornington</span>
+      </div>
     </div>
   </div>
 </section>
@@ -549,11 +529,6 @@
   window.addEventListener('load', () => {
     setTimeout(() => { document.getElementById('loader').classList.add('hidden'); }, 1600);
   });
-  const params = new URLSearchParams(window.location.search);
-  if (params.get('sent') === '1') {
-    document.getElementById('mainForm').style.display = 'none';
-    document.getElementById('formSuccess').style.display = 'block';
-  }
   window.addEventListener('scroll', () => {
     document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 60);
   });
@@ -568,15 +543,6 @@
     });
   }, { threshold: 0.12 });
   document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-  document.getElementById('mainForm')?.addEventListener('submit', () => {
-    document.getElementById('btnText').textContent = 'Sending...';
-    document.getElementById('btnSpinner').style.display = 'block';
-    document.getElementById('submitBtn').disabled = true;
-    setTimeout(() => {
-      document.getElementById('mainForm').style.display = 'none';
-      document.getElementById('formSuccess').style.display = 'block';
-    }, 8000);
-  });
 </script>
 </body>
 </html>
