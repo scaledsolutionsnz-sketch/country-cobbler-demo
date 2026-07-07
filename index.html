@@ -84,7 +84,7 @@
   .marquee-wrap { background: var(--accent); padding: 14px 0; overflow: hidden; }
   .marquee-track { display: flex; gap: 0; white-space: nowrap; animation: marquee 28s linear infinite; }
   .marquee-item { font-family: 'Oswald', sans-serif; font-size: 0.9rem; letter-spacing: 3px; text-transform: uppercase; color: white; padding: 0 32px; display: inline-flex; align-items: center; gap: 18px; }
-  .marquee-item::after { content: '✦'; opacity: 0.6; }
+  .marquee-item::after { content: ''; width: 5px; height: 5px; border-radius: 50%; background: var(--accent); opacity: 0.8; }
   @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 
   /* SECTIONS */
@@ -115,7 +115,8 @@
   .service-card::before { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(139,105,20,0.08) 0%, transparent 60%); opacity: 0; transition: opacity 0.3s; }
   .service-card:hover { background: rgba(255,255,255,0.07); border-color: rgba(139,105,20,0.3); transform: translateY(-4px); }
   .service-card:hover::before { opacity: 1; }
-  .service-icon { font-size: 2rem; margin-bottom: 18px; }
+  .service-icon { color: var(--accent); margin-bottom: 18px; line-height: 0; }
+  .service-icon svg { width: 42px; height: 42px; }
   .service-card h3 { font-family: 'Oswald', sans-serif; font-size: 1.2rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; color: var(--white); margin-bottom: 12px; }
   .service-card p { font-size: 0.9rem; color: rgba(255,255,255,0.6); line-height: 1.7; }
   .service-card .service-link { display: inline-flex; align-items: center; gap: 6px; color: var(--accent); font-size: 0.82rem; letter-spacing: 1px; text-transform: uppercase; text-decoration: none; margin-top: 18px; font-weight: 600; transition: gap 0.2s; }
@@ -156,7 +157,8 @@
   .contact-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 72px; align-items: start; }
   .contact-info .section-sub { color: rgba(255,255,255,0.6); }
   .contact-detail { display: flex; align-items: flex-start; gap: 16px; margin-top: 28px; }
-  .contact-icon { width: 44px; height: 44px; background: rgba(139,105,20,0.15); border: 1px solid rgba(139,105,20,0.25); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: var(--accent); font-size: 1.1rem; flex-shrink: 0; }
+  .contact-icon { width: 44px; height: 44px; background: rgba(139,105,20,0.15); border: 1px solid rgba(139,105,20,0.25); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: var(--accent); flex-shrink: 0; }
+  .contact-icon svg { width: 20px; height: 20px; }
   .contact-detail-text strong { display: block; color: white; font-weight: 600; font-size: 0.95rem; }
   .contact-detail-text span { color: rgba(255,255,255,0.55); font-size: 0.9rem; }
   form.cc-form { display: flex; flex-direction: column; gap: 14px; }
@@ -323,37 +325,37 @@
   </div>
   <div class="services-grid">
     <div class="service-card reveal">
-      <div class="service-icon">&#128247;</div>
+      <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 16h18a0 0 0 0 1 0 0v2a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1z"/><path d="M3 16l2-6c.3-1 1-1.6 2-1.6 1.4 0 2.2 1 3.5 1.6L14 12l5.5 1.4c1.3.3 2.5 1.1 2.5 2.6"/><path d="M9.5 9.8 11 12"/></svg></div>
       <h3>Heel Replacement</h3>
       <p>Worn-down heels are one of the most common repairs we do. We replace rubber, leather, and stacked heels to restore comfort and style.</p>
       <a href="#contact" class="service-link">Book Now &#8594;</a>
     </div>
     <div class="service-card reveal">
-      <div class="service-icon">&#128295;</div>
+      <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="8.5" rx="5" ry="6.5"/><path d="M7.5 14c-.3 2 .5 6 4.5 6s4.8-4 4.5-6"/><path d="M9.5 7h5M9.5 10h5"/></svg></div>
       <h3>Sole Repair</h3>
       <p>Whether it's a split sole, worn-through bottom, or delamination — we bond, stitch, and restore soles to full working order.</p>
       <a href="#contact" class="service-link">Book Now &#8594;</a>
     </div>
     <div class="service-card reveal">
-      <div class="service-icon">&#10024;</div>
+      <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c3.2 4.2 6 7.2 6 10.2A6 6 0 0 1 6 13.2C6 10.2 8.8 7.2 12 3z"/><path d="M9.5 13.5a2.5 2.5 0 0 0 2.5 2.5"/></svg></div>
       <h3>Leather Conditioning</h3>
       <p>Bring dry, cracked leather back to life with our professional conditioning and restoration service. Colour matching available.</p>
       <a href="#contact" class="service-link">Book Now &#8594;</a>
     </div>
     <div class="service-card reveal">
-      <div class="service-icon">&#129504;</div>
+      <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 3H12v9c1.9.3 3.4 1.1 4.9 2.1 1.6 1 2.6 2 2.6 3.4a1 1 0 0 1-1 1H8.5a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1z"/><path d="M12 14.5c1.6.8 3.3 1.2 5 1.2"/></svg></div>
       <h3>Boot Repair</h3>
       <p>Work boots, hiking boots, and dress boots — we handle all types of boot repairs including upper stitching, welt repairs, and full resoles.</p>
       <a href="#contact" class="service-link">Book Now &#8594;</a>
     </div>
     <div class="service-card reveal">
-      <div class="service-icon">&#129521;</div>
+      <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20"/><path d="M9 4.5h1M14 4.5h1M9 7.5h1M14 7.5h1M9 10.5h1M14 10.5h1"/><rect x="9.5" y="13" width="5" height="7" rx="1.4"/><path d="M12 16v2"/></svg></div>
       <h3>Zipper Repair</h3>
       <p>Broken or stuck zippers on boots and bags replaced quickly. We source quality replacement zippers and guarantee the finish.</p>
       <a href="#contact" class="service-link">Book Now &#8594;</a>
     </div>
     <div class="service-card reveal">
-      <div class="service-icon">&#128094;</div>
+      <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h18"/><path d="M7 8l-4 4 4 4M17 8l4 4-4 4"/></svg></div>
       <h3>Shoe Stretching</h3>
       <p>Shoes a little tight? We use professional stretching equipment to gently widen and lengthen footwear for a comfortable fit.</p>
       <a href="#contact" class="service-link">Book Now &#8594;</a>
@@ -410,8 +412,8 @@
       <div class="cred-label">Satisfaction Guarantee</div>
     </div>
     <div class="cred-item reveal">
-      <div class="cred-num">4.9&#9733;</div>
-      <div class="cred-label">Google Rating</div>
+      <div class="cred-num">4.7&#9733;</div>
+      <div class="cred-label">Google · 18 Reviews</div>
     </div>
   </div>
 </section>
@@ -420,29 +422,54 @@
 <section id="reviews">
   <span class="section-label">What People Say</span>
   <h2 class="section-title">Customer Reviews</h2>
+  <p class="section-sub" style="text-align:center;margin:0 auto 8px;">Rated 4.7 stars across 18 Google reviews.</p>
   <div class="reviews-grid">
     <div class="review-card reveal">
       <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-      <p class="review-text">"Took in my old leather boots which I thought were beyond saving. Country Cobbler resoled them and they look better than ever. Amazing craftsmanship and fair price."</p>
+      <p class="review-text">"Awesome guy, talented cobbler, great prices thanks Greg!"</p>
       <div class="review-author">
-        <div class="review-avatar">SJ</div>
-        <div><div class="review-name">Sarah J.</div><div class="review-source">Google Review</div></div>
+        <div class="review-avatar">JN</div>
+        <div><div class="review-name">Joseph Newdick</div><div class="review-source">Google Review</div></div>
       </div>
     </div>
     <div class="review-card reveal">
       <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-      <p class="review-text">"Quick turnaround and brilliant work on my work boots. Heel replacement and a full conditioning — they came back looking almost new. Will use every time."</p>
+      <p class="review-text">"Knowledgeable and friendly service. Willing to work with me over pick up time. Quality and low cost."</p>
       <div class="review-author">
-        <div class="review-avatar">MT</div>
-        <div><div class="review-name">Mike T.</div><div class="review-source">Google Review</div></div>
+        <div class="review-avatar">JF</div>
+        <div><div class="review-name">Jade Fraser</div><div class="review-source">Google Review</div></div>
       </div>
     </div>
     <div class="review-card reveal">
       <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-      <p class="review-text">"Best cobbler in Dunedin, hands down. Fixed the zipper on my boots and stretched a tight pair of heels. Friendly service and great prices. Highly recommend."</p>
+      <p class="review-text">"When a foolish tramper managed to melt her boot by the fire, this handy cobbler magically hammered the toe back out and made them useable again! Forever grateful."</p>
       <div class="review-author">
-        <div class="review-avatar">LB</div>
-        <div><div class="review-name">Lisa B.</div><div class="review-source">Google Review</div></div>
+        <div class="review-avatar">TT</div>
+        <div><div class="review-name">Tarsh Turner</div><div class="review-source">Google Review</div></div>
+      </div>
+    </div>
+    <div class="review-card reveal">
+      <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <p class="review-text">"Very pleased with his work and reasonable charge. Thoroughly recommend!"</p>
+      <div class="review-author">
+        <div class="review-avatar">CA</div>
+        <div><div class="review-name">Chrissy Anderson</div><div class="review-source">Google · Local Guide</div></div>
+      </div>
+    </div>
+    <div class="review-card reveal">
+      <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <p class="review-text">"Great quality and price and fast turn-around. Excellent service."</p>
+      <div class="review-author">
+        <div class="review-avatar">AR</div>
+        <div><div class="review-name">Amy Rosenfeld</div><div class="review-source">Google Review</div></div>
+      </div>
+    </div>
+    <div class="review-card reveal">
+      <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <p class="review-text">"Great local shoe shop that manages to save my boots that opened at the front on my holiday. They literally saved my shoe life."</p>
+      <div class="review-author">
+        <div class="review-avatar">CJ</div>
+        <div><div class="review-name">C Johnson</div><div class="review-source">Google · Local Guide</div></div>
       </div>
     </div>
   </div>
@@ -459,15 +486,15 @@
       <h2 class="section-title light">Request a<br>Repair Quote</h2>
       <p class="section-sub">Drop us a message and we'll get back to you quickly with a quote. Bring your shoes in or enquire online — we make it easy.</p>
       <div class="contact-detail">
-        <div class="contact-icon">&#128222;</div>
+        <div class="contact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-3 2a12 12 0 0 0 5 5l2-3 5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg></div>
         <div class="contact-detail-text"><strong>Phone</strong><span>021 238 4506</span></div>
       </div>
       <div class="contact-detail">
-        <div class="contact-icon">&#128205;</div>
-        <div class="contact-detail-text"><strong>Location</strong><span>Dunedin, New Zealand</span></div>
+        <div class="contact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></div>
+        <div class="contact-detail-text"><strong>Location</strong><span>45 Mailer Street, Mornington, Dunedin 9011</span></div>
       </div>
       <div class="contact-detail">
-        <div class="contact-icon">&#9993;</div>
+        <div class="contact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1z"/><path d="m3.5 6.5 8.5 6 8.5-6"/></svg></div>
         <div class="contact-detail-text"><strong>Email</strong><span>puregolfnz@gmail.com</span></div>
       </div>
     </div>
