@@ -4,6 +4,17 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Country Cobbler | Shoe Repair Dunedin</title>
+<meta name="description" content="Shoe and boot repairs at 45 Mailer Street, Mornington, Dunedin. Heels, soles, zips, stretching and resoles. Call or text 021 238 4506.">
+<meta name="theme-color" content="#0f2c4d">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://country-cobbler-demo.vercel.app/">
+<meta property="og:title" content="Country Cobbler | Shoe Repair Dunedin">
+<meta property="og:description" content="Shoe and boot repairs at 45 Mailer Street, Mornington, Dunedin. Rated 4.7 on Google.">
+<meta property="og:image" content="https://country-cobbler-demo.vercel.app/images/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -52,7 +63,7 @@
   .nav-links { display: flex; gap: 36px; list-style: none; }
   .nav-links a { color: rgba(255,255,255,0.85); text-decoration: none; font-size: 0.85rem; letter-spacing: 1.5px; text-transform: uppercase; font-weight: 500; transition: color 0.2s; }
   .nav-links a:hover { color: var(--accent); }
-  .nav-cta { background: var(--accent); color: var(--white); padding: 10px 22px; border-radius: 4px; font-family: 'Oswald', sans-serif; letter-spacing: 1.5px; text-transform: uppercase; font-size: 0.85rem; text-decoration: none; transition: background 0.2s, transform 0.2s; }
+  .nav-cta { background: var(--accent); color: var(--dark); padding: 10px 22px; border-radius: 4px; font-family: 'Oswald', sans-serif; letter-spacing: 1.5px; text-transform: uppercase; font-size: 0.85rem; text-decoration: none; transition: background 0.2s, transform 0.2s; }
   .nav-cta:hover { background: var(--accent-light); transform: translateY(-1px); }
   .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
   .hamburger span { width: 26px; height: 2px; background: white; transition: all 0.3s; }
@@ -69,11 +80,11 @@
   }
   .hero::after { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(15,44,77,0.82) 0%, rgba(15,44,77,0.55) 100%); }
   .hero-content { position: relative; z-index: 1; padding: 0 8%; max-width: 780px; }
-  .hero-tag { display: inline-block; background: var(--accent); color: white; font-size: 0.75rem; letter-spacing: 3px; text-transform: uppercase; padding: 6px 16px; border-radius: 2px; margin-bottom: 22px; font-family: 'Barlow', sans-serif; font-weight: 600; }
+  .hero-tag { display: inline-block; background: var(--accent); color: var(--dark); font-size: 0.75rem; letter-spacing: 3px; text-transform: uppercase; padding: 6px 16px; border-radius: 2px; margin-bottom: 22px; font-family: 'Barlow', sans-serif; font-weight: 600; }
   .hero h1 { font-family: 'Oswald', sans-serif; font-size: clamp(3rem, 7vw, 5.5rem); font-weight: 700; color: var(--white); line-height: 1.05; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 22px; }
   .hero h1 span { color: var(--accent); }
   .hero-sub { font-size: 1.15rem; color: rgba(255,255,255,0.78); font-weight: 300; line-height: 1.7; max-width: 520px; margin-bottom: 36px; }
-  .btn-primary { display: inline-flex; align-items: center; gap: 10px; background: var(--accent); color: white; padding: 16px 32px; border-radius: 4px; font-family: 'Oswald', sans-serif; font-size: 1rem; letter-spacing: 2px; text-transform: uppercase; text-decoration: none; transition: background 0.2s, transform 0.2s, box-shadow 0.2s; }
+  .btn-primary { display: inline-flex; align-items: center; gap: 10px; background: var(--accent); color: var(--dark); padding: 16px 32px; border-radius: 4px; font-family: 'Oswald', sans-serif; font-size: 1rem; letter-spacing: 2px; text-transform: uppercase; text-decoration: none; transition: background 0.2s, transform 0.2s, box-shadow 0.2s; }
   .btn-primary:hover { background: var(--accent-light); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(244,180,0,0.35); }
   .btn-outline { display: inline-flex; align-items: center; gap: 10px; border: 1.5px solid rgba(255,255,255,0.5); color: white; padding: 15px 30px; border-radius: 4px; font-family: 'Oswald', sans-serif; font-size: 1rem; letter-spacing: 2px; text-transform: uppercase; text-decoration: none; margin-left: 14px; transition: border-color 0.2s, background 0.2s; }
   .btn-outline:hover { border-color: var(--accent); background: rgba(244,180,0,0.15); }
@@ -83,8 +94,8 @@
   /* MARQUEE */
   .marquee-wrap { background: var(--accent); padding: 14px 0; overflow: hidden; }
   .marquee-track { display: flex; gap: 0; white-space: nowrap; animation: marquee 28s linear infinite; }
-  .marquee-item { font-family: 'Oswald', sans-serif; font-size: 0.9rem; letter-spacing: 3px; text-transform: uppercase; color: white; padding: 0 32px; display: inline-flex; align-items: center; gap: 18px; }
-  .marquee-item::after { content: ''; width: 5px; height: 5px; border-radius: 50%; background: var(--accent); opacity: 0.8; }
+  .marquee-item { font-family: 'Oswald', sans-serif; font-size: 0.9rem; letter-spacing: 3px; text-transform: uppercase; color: var(--dark); padding: 0 32px; display: inline-flex; align-items: center; gap: 18px; }
+  .marquee-item::after { content: ''; width: 5px; height: 5px; border-radius: 50%; background: var(--dark); opacity: 0.5; }
   @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 
   /* SECTIONS */
@@ -98,7 +109,7 @@
   .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center; }
   .about-img-wrap { position: relative; }
   .about-img { width: 100%; height: 500px; object-fit: cover; border-radius: 4px; display: block; }
-  .about-badge { position: absolute; bottom: -20px; right: -20px; background: var(--accent); color: white; font-family: 'Oswald', sans-serif; text-align: center; padding: 24px; border-radius: 4px; min-width: 120px; }
+  .about-badge { position: absolute; bottom: -20px; right: -20px; background: var(--accent); color: var(--dark); font-family: 'Oswald', sans-serif; text-align: center; padding: 24px; border-radius: 4px; min-width: 120px; }
   .about-badge .num { font-size: 2.8rem; font-weight: 700; line-height: 1; }
   .about-badge .lbl { font-size: 0.75rem; letter-spacing: 2px; text-transform: uppercase; opacity: 0.85; }
   .about-points { margin-top: 28px; display: flex; flex-direction: column; gap: 14px; }
@@ -127,19 +138,13 @@
   .gallery-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr; grid-template-rows: 280px 280px; gap: 14px; margin-top: 48px; }
   .gallery-item { overflow: hidden; border-radius: 8px; position: relative; }
   .gallery-item:first-child { grid-row: span 2; }
+  .gallery-item:not(:first-child) { grid-column: span 2; }
+  .gallery-item.show-top img { object-position: center top; }
   .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; display: block; }
   .gallery-item:hover img { transform: scale(1.05); }
   .gallery-item .overlay { position: absolute; inset: 0; background: rgba(15,44,77,0.4); opacity: 0; transition: opacity 0.3s; display: flex; align-items: center; justify-content: center; }
   .gallery-item:hover .overlay { opacity: 1; }
   .gallery-item .overlay span { color: white; font-family: 'Oswald', sans-serif; font-size: 0.9rem; letter-spacing: 2px; text-transform: uppercase; }
-
-  /* CREDENTIALS */
-  .cred-section { background: var(--dark2); padding: 80px 8%; }
-  .cred-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px; margin-top: 56px; }
-  .cred-item { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06); padding: 36px 24px; text-align: center; transition: background 0.3s; }
-  .cred-item:hover { background: rgba(244,180,0,0.08); }
-  .cred-num { font-family: 'Oswald', sans-serif; font-size: 3rem; font-weight: 700; color: var(--accent); line-height: 1; }
-  .cred-label { font-size: 0.85rem; color: rgba(255,255,255,0.55); margin-top: 8px; letter-spacing: 1px; text-transform: uppercase; }
 
   /* REVIEWS */
   .reviews-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 48px; }
@@ -148,7 +153,7 @@
   .review-stars { color: #f4b400; font-size: 1rem; margin-bottom: 14px; letter-spacing: 2px; }
   .review-text { font-size: 0.95rem; line-height: 1.75; color: var(--text); margin-bottom: 20px; font-style: italic; }
   .review-author { display: flex; align-items: center; gap: 12px; }
-  .review-avatar { width: 42px; height: 42px; border-radius: 50%; background: var(--accent); display: flex; align-items: center; justify-content: center; font-family: 'Oswald', sans-serif; color: white; font-weight: 700; font-size: 1rem; flex-shrink: 0; }
+  .review-author::before { content: ''; width: 26px; height: 26px; flex-shrink: 0; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Cpath fill='%234285F4' d='M45.12 24.5c0-1.56-.14-3.06-.4-4.5H24v8.51h11.84c-.51 2.75-2.06 5.08-4.39 6.64v5.52h7.11c4.16-3.83 6.56-9.47 6.56-16.17z'/%3E%3Cpath fill='%2334A853' d='M24 46c5.94 0 10.92-1.97 14.56-5.33l-7.11-5.52c-1.97 1.32-4.49 2.1-7.45 2.1-5.73 0-10.58-3.87-12.31-9.07H4.34v5.7C7.96 41.07 15.4 46 24 46z'/%3E%3Cpath fill='%23FBBC05' d='M11.69 28.18C11.25 26.86 11 25.45 11 24s.25-2.86.69-4.18v-5.7H4.34C2.85 17.09 2 20.45 2 24s.85 6.91 2.34 9.88l7.35-5.7z'/%3E%3Cpath fill='%23EA4335' d='M24 10.75c3.23 0 6.13 1.11 8.41 3.29l6.31-6.31C34.91 4.18 29.93 2 24 2 15.4 2 7.96 6.93 4.34 14.12l7.35 5.7c1.73-5.2 6.58-9.07 12.31-9.07z'/%3E%3C/svg%3E") center/contain no-repeat; }
   .review-name { font-weight: 600; font-size: 0.92rem; color: var(--dark); }
   .review-source { font-size: 0.78rem; color: var(--muted); }
 
@@ -200,16 +205,16 @@
     .about-grid, .contact-grid { grid-template-columns: 1fr; gap: 40px; }
     .about-badge { right: 0; bottom: -16px; }
     .services-grid { grid-template-columns: 1fr 1fr; }
-    .gallery-grid { grid-template-columns: 1fr 1fr; grid-template-rows: auto; }
-    .gallery-item:first-child { grid-row: span 1; }
-    .cred-grid { grid-template-columns: repeat(2, 1fr); }
+    .gallery-grid { grid-template-columns: 1fr; grid-template-rows: none; grid-auto-rows: 260px; }
+    .gallery-item:first-child, .gallery-item:not(:first-child) { grid-row: auto; grid-column: auto; }
+    .gallery-item:first-child img { object-position: 50% 75%; }
     .reviews-grid { grid-template-columns: 1fr; }
     .form-row { grid-template-columns: 1fr; }
     section { padding: 72px 6%; }
   }
   @media (max-width: 560px) {
     .services-grid { grid-template-columns: 1fr; }
-    .gallery-grid { grid-template-columns: 1fr; }
+    .gallery-grid { grid-auto-rows: 220px; }
     .hero h1 { font-size: 2.6rem; }
   }
 </style>
@@ -227,7 +232,7 @@
 
 <!-- NAV -->
 <nav id="navbar">
-  <a href="#" class="nav-logo">Country <span>Cobbler</span></a>
+  <a href="#home" class="nav-logo">Country <span>Cobbler</span></a>
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
     <li><a href="#services">Services</a></li>
@@ -253,8 +258,8 @@
   <div class="hero-content">
     <div class="hero-tag">Dunedin, New Zealand</div>
     <h1>Repaired.<br><span>Restored.</span><br>Resoled.</h1>
-    <p class="hero-sub">Quality shoe and boot repair crafted by hand. From heel replacements to full resoles — we bring your favourite footwear back to life.</p>
-    <a href="#contact" class="btn-primary">Get a Free Quote &#8594;</a>
+    <p class="hero-sub">Quality shoe and boot repair, done by hand in our Mornington workshop. From new heels to full resoles, we bring your favourite footwear back to life.</p>
+    <a href="#contact" class="btn-primary">Get a Quote &#8594;</a>
     <a href="#services" class="btn-outline">Our Services</a>
   </div>
   <div class="hero-scroll"><div class="scroll-line"></div> Scroll to explore</div>
@@ -267,7 +272,7 @@
     <span class="marquee-item">Sole Repair</span>
     <span class="marquee-item">Leather Conditioning</span>
     <span class="marquee-item">Boot Repair</span>
-    <span class="marquee-item">Zipper Replacement</span>
+    <span class="marquee-item">Zip Replacement</span>
     <span class="marquee-item">Shoe Stretching</span>
     <span class="marquee-item">Full Resoling</span>
     <span class="marquee-item">Leather Restoration</span>
@@ -275,7 +280,7 @@
     <span class="marquee-item">Sole Repair</span>
     <span class="marquee-item">Leather Conditioning</span>
     <span class="marquee-item">Boot Repair</span>
-    <span class="marquee-item">Zipper Replacement</span>
+    <span class="marquee-item">Zip Replacement</span>
     <span class="marquee-item">Shoe Stretching</span>
     <span class="marquee-item">Full Resoling</span>
     <span class="marquee-item">Leather Restoration</span>
@@ -287,32 +292,32 @@
   <div class="about-grid">
     <div class="about-img-wrap reveal">
       <img class="about-img" src="images/cobbler-workshop.webp" alt="Inside the Country Cobbler workshop, Dunedin">
-      <div class="about-badge"><div class="num">20+</div><div class="lbl">Years Experience</div></div>
+      <div class="about-badge"><div class="num">4.7<span aria-hidden="true">&#9733;</span></div><div class="lbl">Google Rating</div></div>
     </div>
     <div class="about-text reveal">
       <span class="section-label">Who We Are</span>
       <h2 class="section-title">Dunedin's Trusted<br>Shoe Repair Experts</h2>
-      <p class="section-sub">Country Cobbler has been restoring footwear across Dunedin for over two decades. We take pride in giving quality shoes and boots a second life — saving you money and keeping great footwear out of landfill.</p>
+      <p class="section-sub">Country Cobbler is Greg's shoe and boot repair shop on Mailer Street in Mornington. We take pride in giving good footwear a second life, saving you money and keeping it out of landfill.</p>
       <div class="about-points">
         <div class="about-point">
           <div class="about-point-icon">&#10022;</div>
           <div class="about-point-text">
             <strong>Expert Craftsmanship</strong>
-            <span>Every job is handled with care, skill, and attention to detail from our experienced team.</span>
+            <span>Every repair is done here in the shop, with care and attention to detail.</span>
           </div>
         </div>
         <div class="about-point">
           <div class="about-point-icon">&#10022;</div>
           <div class="about-point-text">
             <strong>All Footwear Welcome</strong>
-            <span>From dress shoes and heels to work boots and sneakers — we repair it all.</span>
+            <span>From dress shoes and heels to work boots and tramping boots. Bring them in and we'll take a look.</span>
           </div>
         </div>
         <div class="about-point">
           <div class="about-point-icon">&#10022;</div>
           <div class="about-point-text">
-            <strong>Fast Turnaround</strong>
-            <span>Most repairs completed within a few days. Ask about our express service.</span>
+            <strong>Fair Prices</strong>
+            <span>Good work at a fair price, as plenty of our Google reviews say.</span>
           </div>
         </div>
       </div>
@@ -334,106 +339,71 @@
       <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 16h18a0 0 0 0 1 0 0v2a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1z"/><path d="M3 16l2-6c.3-1 1-1.6 2-1.6 1.4 0 2.2 1 3.5 1.6L14 12l5.5 1.4c1.3.3 2.5 1.1 2.5 2.6"/><path d="M9.5 9.8 11 12"/></svg></div>
       <h3>Heel Replacement</h3>
       <p>Worn-down heels are one of the most common repairs we do. We replace rubber, leather, and stacked heels to restore comfort and style.</p>
-      <a href="#contact" class="service-link">Book Now &#8594;</a>
+      <a href="#contact" class="service-link">Get a Quote &#8594;</a>
     </div>
     <div class="service-card reveal">
       <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="8.5" rx="5" ry="6.5"/><path d="M7.5 14c-.3 2 .5 6 4.5 6s4.8-4 4.5-6"/><path d="M9.5 7h5M9.5 10h5"/></svg></div>
       <h3>Sole Repair</h3>
-      <p>Whether it's a split sole, worn-through bottom, or delamination — we bond, stitch, and restore soles to full working order.</p>
-      <a href="#contact" class="service-link">Book Now &#8594;</a>
+      <p>Split sole, worn-through bottom or a sole coming away? We bond, stitch and restore soles to full working order.</p>
+      <a href="#contact" class="service-link">Get a Quote &#8594;</a>
     </div>
     <div class="service-card reveal">
       <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c3.2 4.2 6 7.2 6 10.2A6 6 0 0 1 6 13.2C6 10.2 8.8 7.2 12 3z"/><path d="M9.5 13.5a2.5 2.5 0 0 0 2.5 2.5"/></svg></div>
       <h3>Leather Conditioning</h3>
-      <p>Bring dry, cracked leather back to life with our professional conditioning and restoration service. Colour matching available.</p>
-      <a href="#contact" class="service-link">Book Now &#8594;</a>
+      <p>Bring dry, cracked leather back to life with our conditioning and restoration service.</p>
+      <a href="#contact" class="service-link">Get a Quote &#8594;</a>
     </div>
     <div class="service-card reveal">
       <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 3H12v9c1.9.3 3.4 1.1 4.9 2.1 1.6 1 2.6 2 2.6 3.4a1 1 0 0 1-1 1H8.5a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1z"/><path d="M12 14.5c1.6.8 3.3 1.2 5 1.2"/></svg></div>
       <h3>Boot Repair</h3>
-      <p>Work boots, hiking boots, and dress boots — we handle all types of boot repairs including upper stitching, welt repairs, and full resoles.</p>
-      <a href="#contact" class="service-link">Book Now &#8594;</a>
+      <p>Work boots, tramping boots and dress boots. We handle boot repairs including upper stitching, welt repairs and full resoles.</p>
+      <a href="#contact" class="service-link">Get a Quote &#8594;</a>
     </div>
     <div class="service-card reveal">
       <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20"/><path d="M9 4.5h1M14 4.5h1M9 7.5h1M14 7.5h1M9 10.5h1M14 10.5h1"/><rect x="9.5" y="13" width="5" height="7" rx="1.4"/><path d="M12 16v2"/></svg></div>
-      <h3>Zipper Repair</h3>
-      <p>Broken or stuck zippers on boots and bags replaced quickly. We source quality replacement zippers and guarantee the finish.</p>
-      <a href="#contact" class="service-link">Book Now &#8594;</a>
+      <h3>Zip Repair</h3>
+      <p>Broken or stuck zips on boots and bags replaced with good quality new zips.</p>
+      <a href="#contact" class="service-link">Get a Quote &#8594;</a>
     </div>
     <div class="service-card reveal">
       <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h18"/><path d="M7 8l-4 4 4 4M17 8l4 4-4 4"/></svg></div>
       <h3>Shoe Stretching</h3>
-      <p>Shoes a little tight? We use professional stretching equipment to gently widen and lengthen footwear for a comfortable fit.</p>
-      <a href="#contact" class="service-link">Book Now &#8594;</a>
+      <p>Shoes a little tight? We can gently stretch them for a more comfortable fit.</p>
+      <a href="#contact" class="service-link">Get a Quote &#8594;</a>
     </div>
   </div>
 </section>
 
 <!-- GALLERY -->
 <section id="gallery" class="gallery-section">
-  <span class="section-label">Our Work</span>
-  <h2 class="section-title">Before &amp; After</h2>
-  <p class="section-sub">Every pair that leaves our workshop is repaired to the highest standard. Here's a glimpse of recent work.</p>
+  <span class="section-label">Gallery</span>
+  <h2 class="section-title">Visit the Shop</h2>
+  <p class="section-sub">Find us at 45 Mailer Street, Mornington: the shopfront, the counter, the machines and plenty of boots.</p>
   <div class="gallery-grid">
     <div class="gallery-item reveal">
-      <img src="images/cobbler-store.webp" alt="Inside the Country Cobbler shop">
-      <div class="overlay"><span>Boot Restoration</span></div>
+      <img src="images/cobbler-store.webp" alt="The counter inside the Country Cobbler shop, Mornington">
+      <div class="overlay"><span>The Counter</span></div>
     </div>
     <div class="gallery-item reveal">
-      <img src="images/cobbler-inside.webp" alt="Country Cobbler store counter and shelves">
-      <div class="overlay"><span>Sole Repair</span></div>
+      <img src="images/cobbler-inside.webp" alt="Boots and repair machines inside the shop">
+      <div class="overlay"><span>Boots and Machines</span></div>
     </div>
-    <div class="gallery-item reveal">
-      <img src="images/cobbler-inside2.webp" alt="Shoe care products in store">
-      <div class="overlay"><span>Leather Care</span></div>
-    </div>
-    <div class="gallery-item reveal">
-      <img src="images/cobbler-workshop.webp" alt="Repair machinery in the workshop">
-      <div class="overlay"><span>Heel Replacement</span></div>
-    </div>
-    <div class="gallery-item reveal">
-      <img src="images/cobbler-outside.webp" alt="Country Cobbler shopfront and signage">
-      <div class="overlay"><span>Craftsmanship</span></div>
-    </div>
-  </div>
-</section>
-
-<!-- CREDENTIALS -->
-<section class="cred-section">
-  <div style="text-align:center;">
-    <span class="section-label" style="display:block; text-align:center;">By The Numbers</span>
-    <h2 class="section-title light" style="text-align:center;">Trusted Across Dunedin</h2>
-  </div>
-  <div class="cred-grid">
-    <div class="cred-item reveal">
-      <div class="cred-num">20+</div>
-      <div class="cred-label">Years in Business</div>
-    </div>
-    <div class="cred-item reveal">
-      <div class="cred-num">5,000+</div>
-      <div class="cred-label">Pairs Repaired</div>
-    </div>
-    <div class="cred-item reveal">
-      <div class="cred-num">100%</div>
-      <div class="cred-label">Satisfaction Guarantee</div>
-    </div>
-    <div class="cred-item reveal">
-      <div class="cred-num">4.7&#9733;</div>
-      <div class="cred-label">Google · 18 Reviews</div>
+    <div class="gallery-item show-top reveal">
+      <img src="images/cobbler-outside.webp" alt="Country Cobbler shopfront on Mailer Street, Mornington">
+      <div class="overlay"><span>45 Mailer Street</span></div>
     </div>
   </div>
 </section>
 
 <!-- REVIEWS -->
 <section id="reviews">
-  <span class="section-label">What People Say</span>
-  <h2 class="section-title">Customer Reviews</h2>
-  <p class="section-sub" style="text-align:center;margin:0 auto 8px;">Rated 4.7 stars across 18 Google reviews.</p>
+  <span class="section-label" style="text-align:center;">What People Say</span>
+  <h2 class="section-title" style="text-align:center;">Customer Reviews</h2>
   <div style="display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap:wrap;background:#fff;border:1px solid rgba(0,0,0,0.08);border-radius:14px;box-shadow:0 4px 24px rgba(0,0,0,0.08);padding:16px 26px;max-width:460px;margin:26px auto 6px;">
     <span style="display:inline-flex;align-items:center;"><svg width="38" height="38" viewBox="0 0 48 48" aria-hidden="true"><path fill="#4285F4" d="M45.12 24.5c0-1.56-.14-3.06-.4-4.5H24v8.51h11.84c-.51 2.75-2.06 5.08-4.39 6.64v5.52h7.11c4.16-3.83 6.56-9.47 6.56-16.17z"/><path fill="#34A853" d="M24 46c5.94 0 10.92-1.97 14.56-5.33l-7.11-5.52c-1.97 1.32-4.49 2.1-7.45 2.1-5.73 0-10.58-3.87-12.31-9.07H4.34v5.7C7.96 41.07 15.4 46 24 46z"/><path fill="#FBBC05" d="M11.69 28.18C11.25 26.86 11 25.45 11 24s.25-2.86.69-4.18v-5.7H4.34C2.85 17.09 2 20.45 2 24s.85 6.91 2.34 9.88l7.35-5.7z"/><path fill="#EA4335" d="M24 10.75c3.23 0 6.13 1.11 8.41 3.29l6.31-6.31C34.91 4.18 29.93 2 24 2 15.4 2 7.96 6.93 4.34 14.12l7.35 5.7c1.73-5.2 6.58-9.07 12.31-9.07z"/></svg></span>
     <div style="text-align:left;line-height:1.15;">
       <div style="font-family:'Oswald',sans-serif;font-size:2rem;font-weight:700;color:var(--dark);">4.7</div>
-      <div style="color:#f4b400;letter-spacing:2px;font-size:1.05rem;">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <div style="color:#f4b400;letter-spacing:2px;font-size:1.05rem;" aria-label="4.7 out of 5 stars">&#9733;&#9733;&#9733;&#9733;<span style="background:linear-gradient(90deg,#f4b400 70%,#d6dbe1 70%);-webkit-background-clip:text;background-clip:text;color:transparent;">&#9733;</span></div>
       <div style="font-size:0.8rem;color:var(--muted);">Based on 18 Google reviews</div>
     </div>
     <a href="review.html" style="background:#1a73e8;color:#fff;font-weight:600;padding:11px 18px;border-radius:8px;font-size:0.9rem;text-decoration:none;white-space:nowrap;">Leave a Google review</a>
@@ -443,7 +413,6 @@
       <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
       <p class="review-text">"Awesome guy, talented cobbler, great prices thanks Greg!"</p>
       <div class="review-author">
-        <div class="review-avatar">JN</div>
         <div><div class="review-name">Joseph Newdick</div><div class="review-source">Google Review</div></div>
       </div>
     </div>
@@ -451,7 +420,6 @@
       <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
       <p class="review-text">"Knowledgeable and friendly service. Willing to work with me over pick up time. Quality and low cost."</p>
       <div class="review-author">
-        <div class="review-avatar">JF</div>
         <div><div class="review-name">Jade Fraser</div><div class="review-source">Google Review</div></div>
       </div>
     </div>
@@ -459,7 +427,6 @@
       <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
       <p class="review-text">"When a foolish tramper managed to melt her boot by the fire, this handy cobbler magically hammered the toe back out and made them useable again! Forever grateful."</p>
       <div class="review-author">
-        <div class="review-avatar">TT</div>
         <div><div class="review-name">Tarsh Turner</div><div class="review-source">Google Review</div></div>
       </div>
     </div>
@@ -467,7 +434,6 @@
       <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
       <p class="review-text">"Very pleased with his work and reasonable charge. Thoroughly recommend!"</p>
       <div class="review-author">
-        <div class="review-avatar">CA</div>
         <div><div class="review-name">Chrissy Anderson</div><div class="review-source">Google · Local Guide</div></div>
       </div>
     </div>
@@ -475,7 +441,6 @@
       <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
       <p class="review-text">"Great quality and price and fast turn-around. Excellent service."</p>
       <div class="review-author">
-        <div class="review-avatar">AR</div>
         <div><div class="review-name">Amy Rosenfeld</div><div class="review-source">Google Review</div></div>
       </div>
     </div>
@@ -483,7 +448,6 @@
       <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
       <p class="review-text">"Great local shoe shop that manages to save my boots that opened at the front on my holiday. They literally saved my shoe life."</p>
       <div class="review-author">
-        <div class="review-avatar">CJ</div>
         <div><div class="review-name">C Johnson</div><div class="review-source">Google · Local Guide</div></div>
       </div>
     </div>
@@ -491,7 +455,6 @@
       <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
       <p class="review-text">"Very obliging, service great! Would recommend for sure."</p>
       <div class="review-author">
-        <div class="review-avatar">SL</div>
         <div><div class="review-name">Sandra Lang</div><div class="review-source">Google · Local Guide</div></div>
       </div>
     </div>
@@ -499,7 +462,6 @@
       <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
       <p class="review-text">"Affordable and quality work repairing boots with a damaged zip."</p>
       <div class="review-author">
-        <div class="review-avatar">JW</div>
         <div><div class="review-name">J Wazza</div><div class="review-source">Google · Local Guide</div></div>
       </div>
     </div>
@@ -507,7 +469,6 @@
       <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
       <p class="review-text">"Excellent service, pleasant staff."</p>
       <div class="review-author">
-        <div class="review-avatar">L</div>
         <div><div class="review-name">Leopold5100</div><div class="review-source">Google · Local Guide</div></div>
       </div>
     </div>
@@ -515,7 +476,6 @@
       <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
       <p class="review-text">"Great affordable repair."</p>
       <div class="review-author">
-        <div class="review-avatar">HT</div>
         <div><div class="review-name">Hohepa Tīmoti</div><div class="review-source">Google Review</div></div>
       </div>
     </div>
@@ -523,7 +483,6 @@
       <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
       <p class="review-text">"Great service, will tell others."</p>
       <div class="review-author">
-        <div class="review-avatar">KS</div>
         <div><div class="review-name">Kerrie Stark</div><div class="review-source">Google Review</div></div>
       </div>
     </div>
@@ -539,10 +498,10 @@
     <div class="contact-info">
       <span class="section-label">Get in Touch</span>
       <h2 class="section-title light">Request a<br>Repair Quote</h2>
-      <p class="section-sub">Drop us a message and we'll get back to you quickly with a quote. Bring your shoes in or enquire online — we make it easy.</p>
+      <p class="section-sub">Every repair is a bit different, so we'll give you a firm price once we've seen your shoes.</p>
       <div class="contact-detail">
         <div class="contact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-3 2a12 12 0 0 0 5 5l2-3 5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg></div>
-        <div class="contact-detail-text"><strong>Phone</strong><span>021 238 4506</span></div>
+        <div class="contact-detail-text"><strong>Phone or text</strong><span><a href="tel:0212384506" style="color:inherit;text-decoration:none;">021 238 4506</a></span></div>
       </div>
       <div class="contact-detail">
         <div class="contact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></div>
@@ -557,7 +516,7 @@
           <a class="btn-primary" href="tel:0212384506" style="justify-content:center;">Call the Shop</a>
           <a class="btn-outline" href="https://maps.google.com/?q=45+Mailer+Street,+Mornington,+Dunedin+9011" target="_blank" rel="noopener" style="justify-content:center;">Get Directions</a>
         </div>
-        <span class="contact-cta-note">Open for drop-ins during shop hours &middot; 45 Mailer Street, Mornington</span>
+        <span class="contact-cta-note">Drop-ins welcome &middot; 45 Mailer Street, Mornington</span>
       </div>
     </div>
   </div>
@@ -576,7 +535,7 @@
     <a href="terms.html">Terms</a>
     <a href="privacy.html">Privacy</a>
   </div>
-  <div class="footer-copy">&#169; 2025 Country Cobbler. All rights reserved.</div>
+  <div class="footer-copy">&#169; <span id="yr">2026</span> Country Cobbler. All rights reserved.</div>
 </footer>
 
 <script>
@@ -597,6 +556,7 @@
     });
   }, { threshold: 0.12 });
   document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  document.getElementById('yr').textContent = new Date().getFullYear();
 </script>
 </body>
 </html>

@@ -4,12 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Leave a Review | Country Cobbler</title>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
-  :root { --accent: #8b6914; --dark: #0b0b0d; --cream: #f8f5f0; --white: #fff; }
+  :root { --accent: #f4b400; --dark: #0f2c4d; --cream: #f5f8fc; --white: #fff; }
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   body { font-family: 'Barlow', sans-serif; background: var(--dark); min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 40px 20px; }
-  .card { background: #141416; border: 1px solid rgba(255,255,255,0.08); border-radius: 16px; padding: 48px 40px; max-width: 520px; width: 100%; text-align: center; }
+  .card { background: #16385f; border: 1px solid rgba(255,255,255,0.08); border-radius: 16px; padding: 48px 40px; max-width: 520px; width: 100%; text-align: center; }
   .logo { font-family: 'Oswald', sans-serif; font-size: 1.3rem; font-weight: 700; color: var(--white); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 32px; }
   .logo span { color: var(--accent); }
   h2 { font-family: 'Oswald', sans-serif; font-size: 1.8rem; font-weight: 700; text-transform: uppercase; color: var(--white); margin-bottom: 10px; }
@@ -17,8 +18,8 @@
   .stars { display: flex; justify-content: center; gap: 10px; margin-bottom: 36px; }
   .star { font-size: 2.8rem; cursor: pointer; color: rgba(255,255,255,0.15); transition: color 0.2s, transform 0.2s; }
   .star:hover, .star.active { color: #f5a623; transform: scale(1.15); }
-  .cta-btn { display: block; background: var(--accent); color: white; padding: 15px 28px; border-radius: 8px; font-family: 'Oswald', sans-serif; font-size: 1rem; letter-spacing: 2px; text-transform: uppercase; text-decoration: none; margin: 10px auto; transition: background 0.2s, transform 0.2s; max-width: 300px; }
-  .cta-btn:hover { background: #b8902a; transform: translateY(-2px); }
+  .cta-btn { display: block; background: var(--accent); color: var(--dark); padding: 15px 28px; border-radius: 8px; font-family: 'Oswald', sans-serif; font-size: 1rem; letter-spacing: 2px; text-transform: uppercase; text-decoration: none; margin: 10px auto; transition: background 0.2s, transform 0.2s; max-width: 300px; }
+  .cta-btn:hover { background: #ffca28; transform: translateY(-2px); }
   .back { display: inline-block; margin-top: 24px; color: rgba(255,255,255,0.35); font-size: 0.85rem; text-decoration: none; transition: color 0.2s; }
   .back:hover { color: var(--accent); }
 </style>
